@@ -27,7 +27,7 @@ func _ready() -> void:
 	tree.add_child.call_deferred(BGM_Player)
 	
 	temp_BGM_Player = BGM_Player.duplicate()
-	#temp_BGM_Player.stream = BGM_tracks[]
+	#temp_BGM_Player.stream = BGM_tracks[] ##TODO needs to be set to the initial BGM track
 	get_tree().root.add_child.call_deferred(temp_BGM_Player)
 	#temp_BGM_Player.process_mode = PROCESS_MODE_ALWAYS #need to decide if pausing pauses BGM, lean towards no
 	await temp_BGM_Player.tree_entered
